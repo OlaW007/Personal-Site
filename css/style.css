@@ -1,0 +1,180 @@
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body{
+    
+    color:white;
+    margin: 0;
+    background-color: white;
+}
+.hero-section{
+    display: flex;
+    flex-direction: row;
+    max-height: 800px;
+    justify-content: flex-end;
+    background-color:black;
+    overflow: hidden;
+    position: relative;
+    
+    
+}
+    #nadpis{
+        font-family: "DM Serif Display";
+        font-size: 10rem;
+        padding-left: 2rem;
+        width: 50%;
+        z-index: 2;
+        position: absolute;
+        left: 2rem;  
+        
+    }
+    #underlined{
+        color: rgb(238, 26, 26);
+    }
+    svg{
+        max-height: fit-content;
+        display: block;
+        
+        
+    }
+    #portrait-div{
+        z-index: 1;
+        position: relative;
+        
+    }
+    #portrait{
+        max-height: 800px;
+        
+       
+    }
+
+.intro-section{
+    background-color: #ee1a1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Oswald";
+    padding-bottom: 100px;
+    
+   
+}
+
+    #ib{
+        font-family: "Oswald";
+        font-size: 8rem;
+        font-weight: bold;
+        text-align: center;
+        position: relative;
+        bottom: 100px;
+        z-index: 1;
+        
+    }
+
+    #ib-text{
+        font-size: 3rem;
+        text-align: center;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 50px;
+    }
+
+    
+    #button{
+        background-color: #EDC532;
+        border: solid white 5px;
+        color: black;
+        border-radius: 50px;
+        
+        padding:20px;
+        font-family: "Oswald";
+        font-weight: bold;
+        font-size: 2rem;
+        cursor: pointer;
+        
+    }
+
+.experience-section{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    overflow: hidden;
+     
+}
+    .flex-container-row {
+        display: flex;
+        justify-content: center;
+        
+    }
+    .category {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        
+        
+    }
+  
+    #experience-header{
+        font-family:"DM Serif Display";
+        font-size: 8rem;
+        grid-area: 1/2/2/3;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    
+    .experience-section .polozka {
+        font-size: 4rem;
+        font-family: "Oswald";
+    }
+    .experience-section .polozka ul {
+        
+        list-style-type: none;
+        font-size: 2rem;
+        padding-left: 15px;
+    }
+
+.footer-class{
+    background-color: rgb(119, 14, 14);
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+
+       @media (max-width: 750px) {
+        
+        #ib{
+            font-size: 3.5rem;
+            background: #1a1a185b;
+            bottom:85px;
+                 
+        }
+        #experience-header{
+            font-size: 4rem;}
+
+         .experience-section .polozka {
+            font-size: 1.8rem;   
+         }
+
+         .experience-section .polozka ul {
+        
+            font-size: 1.5rem;
+        }
+
+      }
+
+      @media (max-width: 560px) {
+        #nadpis{
+            font-size: 6rem;
+            
+            
+        }
+    }
+    
