@@ -46,12 +46,20 @@ body{
         width: 50%;
         z-index: 2;
         position: absolute;
-        left: 2rem;  
-        
+        left: 2rem;     
     }
+
     #underlined{
         color: rgb(238, 26, 26);
     }
+    #nadpis > span:not(#underlined):hover {
+        color: #EDC532;/* styles for direct span children of #nadpis but not #underlined */
+    }
+
+    #nadpis > span > span:hover {
+        color: #EDC532;/* styles for direct span children of #underlined */
+    }
+    
     svg{
         max-height: fit-content;
         display: block;
@@ -104,6 +112,13 @@ body{
         font-weight: bold;
         font-size: 3rem;
         cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    #button:hover {
+        background-color: black;
+        color: #EDC532;
+        border: solid #EDC532 5px;
     }
 
     #experience-header{
