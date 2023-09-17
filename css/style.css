@@ -10,6 +10,7 @@ body{
     margin: 0;
     background-color: white;
 }
+
 .hero-section{
     display: flex;
     flex-direction: row;
@@ -18,9 +19,26 @@ body{
     background-color:black;
     overflow: hidden;
     position: relative;
-    
-    
-}
+    /* Set an initial background so you can see the gradient before the animation starts */
+    background: linear-gradient(45deg, black, black, #ee1a1a, #ee1a1a);
+    background-size: 200% 200%;
+    animation: gradientChange 8s linear infinite;
+    }
+
+    @keyframes gradientChange {
+        0%, 100% {
+            background: linear-gradient(45deg, black, black, #ee1a1a, #ee1a1a);
+            background-size: 200% 200%;
+            background-position: 0% 100%;
+        }
+        50% {
+            background: linear-gradient(45deg, black, black, #ee1a1a, #ee1a1a);
+            background-size: 200% 200%;
+            background-position: 10% 60%;
+        }
+    }
+       
+
     #nadpis{
         font-family: "DM Serif Display";
         font-size: 10rem;
@@ -57,11 +75,9 @@ body{
     flex-direction: column;
     align-items: center;
     font-family: "Oswald";
-    padding-bottom: 100px;
     
-   
+       
 }
-
     #ib{
         font-family: "Oswald";
         font-size: 8rem;
@@ -69,10 +85,8 @@ body{
         text-align: center;
         position: relative;
         bottom: 100px;
-        z-index: 1;
-        
+        z-index: 1;       
     }
-
     #ib-text{
         font-size: 3rem;
         text-align: center;
@@ -80,31 +94,38 @@ body{
         padding-right: 50px;
         padding-bottom: 50px;
     }
-
-    
     #button{
         background-color: #EDC532;
         border: solid white 5px;
         color: black;
         border-radius: 50px;
-        
-        padding:20px;
+        padding:25px;
         font-family: "Oswald";
         font-weight: bold;
-        font-size: 2rem;
+        font-size: 3rem;
         cursor: pointer;
-        
+    }
+
+    #experience-header{
+        font-family:"DM Serif Display";
+        font-size: 8rem;
+        grid-area: 1/2/2/3;
+        text-align: center;
+        position: relative;
+        top: 75px;    
+              
     }
 
 .experience-section{
     background-color: black;
     display: flex;
     flex-direction: column;
-    padding-top: 50px;
+    padding-top: 140px;
     padding-left: 50px;
     padding-right: 50px;
     padding-bottom: 50px;
     overflow: hidden;
+    
      
 }
     .flex-container-row {
@@ -119,17 +140,9 @@ body{
         
         
     }
-  
-    #experience-header{
-        font-family:"DM Serif Display";
-        font-size: 8rem;
-        grid-area: 1/2/2/3;
-        padding-bottom: 20px;
-        text-align: center;
-    }
-    
+   
     .experience-section .polozka {
-        font-size: 4rem;
+        font-size: 3rem;
         font-family: "Oswald";
     }
     .experience-section .polozka ul {
@@ -143,21 +156,31 @@ body{
     background-color: rgb(119, 14, 14);
     padding: 20px;
     text-align: center;
+    color: rgb(119, 119, 119);
 }
-
-
-
-
+   
        @media (max-width: 750px) {
         
         #ib{
             font-size: 3.5rem;
-            background: #1a1a185b;
-            bottom:85px;
-                 
+            background: #1a1a1850;
+            bottom:85px;            
         }
+        #ib-text{
+            font-size: 1.5rem;
+        }
+        
+        #button{
+            font-size: 1.5rem;
+        }
+        .experience-section{
+        padding-top: 90px;        
+         }
         #experience-header{
-            font-size: 4rem;}
+            font-size: 3.5rem;
+            top:32px;
+            
+        }
 
          .experience-section .polozka {
             font-size: 1.8rem;   
@@ -172,9 +195,7 @@ body{
 
       @media (max-width: 560px) {
         #nadpis{
-            font-size: 6rem;
-            
-            
+            font-size: 6rem;            
         }
     }
     
