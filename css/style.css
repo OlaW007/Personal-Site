@@ -74,11 +74,16 @@ body{
         position: relative;
         
     }
-    #portrait{
+     #portrait{
         max-height: 800px;
+        transition: max-height 3s;
         
-       
     }
+    #portrait:hover{
+        max-height: 1000px;
+        
+    }
+
 
 .intro-section{
     background-color: #ee1a1a;
