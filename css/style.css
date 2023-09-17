@@ -52,6 +52,9 @@ body{
     #underlined{
         color: rgb(238, 26, 26);
     }
+    #nadpis span{
+        transition: color 0.3s;
+    }
     #nadpis > span:not(#underlined):hover {
         color: #EDC532;/* styles for direct span children of #nadpis but not #underlined */
     }
