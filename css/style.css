@@ -41,7 +41,7 @@ body{
 
     #nadpis{
         font-family: "DM Serif Display";
-        font-size: 10rem;
+        font-size: clamp(6rem, 20vw, 10rem);
         padding-left: 2rem;
         width: 50%;
         z-index: 2;
