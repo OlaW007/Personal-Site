@@ -42,11 +42,10 @@ body{
     #nadpis{
         font-family: "DM Serif Display";
         font-size: clamp(6rem, 20vw, 10rem);
-        padding-left: 2rem;
         width: 50%;
         z-index: 2;
         position: absolute;
-        left: 2rem;     
+        left: 4rem;     
     }
 
     #underlined{
