@@ -14,7 +14,7 @@ body{
 .hero-section{
     display: flex;
     flex-direction: row;
-    max-height: 800px;
+    height: 800px;
     justify-content: flex-end;
     background-color:black;
     overflow: hidden;
