@@ -187,7 +187,7 @@ body{
          animation-play-state: paused;          
     }
 
-    #experience-header, .category2>.polozka{
+    .category2>.polozka{
         opacity: 0;
         transform: translateY(150px);
         animation: fadeInUp 2s forwards;
@@ -206,11 +206,11 @@ body{
         animation: fadeInUp 2s forwards;
         animation-play-state: paused;
     }
-    #nadpis.loaded, #portrait-div.loaded, #ib.loaded, #ib-text.loaded, #box.loaded, #experience-header.loaded, .category1>.polozka.loaded, .category2>.polozka.loaded, .category3>.polozka.loaded {
+    #nadpis.loaded, #portrait-div.loaded, #ib.loaded, #ib-text.loaded, #box.loaded, .category1>.polozka.loaded, .category2>.polozka.loaded, .category3>.polozka.loaded {
         animation-play-state: running;
     }
     
-    /*ANIMATIONS FOR THE LETTERS*/
+    /*ANIMATIONS FOR THE HEADING*/
         #nadpis > span:not(#underlined):hover {
         color: #EDC532;/* styles for direct span children of #nadpis but not #underlined */
         
@@ -242,7 +242,7 @@ body{
         position: absolute; /* Absolutely position the pseudo-element */
         top: 0;
         right: 0%; 
-        bottom: 0;/* Initially position it to the bottom of the button */
+        bottom: 0;
         left: 0;
         background: #EDC532; /* Set the background color of the pseudo-element to the page background color */
         z-index: 1; /* Place it above the button content */
@@ -252,7 +252,48 @@ body{
         animation: revealButton 4s forwards; /* Apply the animation when the loaded class is added */
     }
     
-   
+/*ANIMATIONS FOR THE EXPERIENCE LETTERS*/
+   .pismeno{
+    display: inline-block;
+    opacity: 0;
+    animation: fadeInUp 2s forwards;
+    animation-play-state: paused; 
+   }
+
+    .prvni-pismeno{
+    transform: translateX(-225px);
+   }
+   .druhe-pismeno{
+    transform: translateX(-175px);
+   }
+   .treti-pismeno{
+    transform: translateX(-125px);
+   }
+   .ctvrte-pismeno{
+    transform: translateX(-75px);
+   }
+   .pate-pismeno{
+    transform: translateX(-25px);
+   }
+   .seste-pismeno{
+    transform: translateX(25px);
+   }
+   .sedme-pismeno{
+    transform: translateX(75px);
+   }
+   .osme-pismeno{
+    transform: translateX(125px);
+   }
+   .devate-pismeno{
+    transform: translateX(175px);
+   }
+   .desate-pismeno{
+    transform: translateX(225px);
+   }
+
+   .pismeno.loaded {
+    animation-play-state: running;
+}
 /*ANIMATIONS KEYFRAMES*/
 
 @keyframes gradientChange {
@@ -270,7 +311,7 @@ body{
 @keyframes fadeInUp {
     to {
       opacity: 1;
-      transform: translateY(0);
+      transform: translateX(0) translateY(0);
       
     }
   }
