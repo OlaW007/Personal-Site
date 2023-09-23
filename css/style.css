@@ -19,26 +19,8 @@ body{
     background-color:black;
     overflow: hidden;
     position: relative;
-    /* Set an initial background so you can see the gradient before the animation starts */
-    background: linear-gradient(45deg, black, black, #ee1a1a, #ee1a1a);
-    background-size: 200% 200%;
-    animation: gradientChange 8s linear infinite;
     }
-
-    @keyframes gradientChange {
-        0%, 100% {
-            background: linear-gradient(45deg, black, black, #ee1a1a, #ee1a1a);
-            background-size: 200% 200%;
-            background-position: 0% 100%;
-        }
-        50% {
-            background: linear-gradient(45deg, black, black, #ee1a1a, #ee1a1a);
-            background-size: 200% 200%;
-            background-position: 10% 60%;
-        }
-    }
-       
-
+   
     #nadpis{
         font-family: "DM Serif Display";
         font-size: clamp(6rem, 20vw, 10rem);
@@ -47,15 +29,19 @@ body{
         position: absolute;
         left: 4rem;     
     }
-
+   
     #underlined{
         color: rgb(238, 26, 26);
     }
+    
     #nadpis span{
         transition: color 0.3s;
+        
     }
+
     #nadpis > span:not(#underlined):hover {
         color: #EDC532;/* styles for direct span children of #nadpis but not #underlined */
+        
     }
 
     #nadpis > span > span:hover {
@@ -70,10 +56,10 @@ body{
     }
     #portrait-div{
         z-index: 1;
-        position: relative;
-        
+        position: relative; 
     }
-     #portrait{
+
+    #portrait{
         max-height: 800px;
         transition: max-height 3s;
         
@@ -100,8 +86,10 @@ body{
         text-align: center;
         position: relative;
         bottom: 100px;
-        z-index: 1;       
+        z-index: 1;
+        width: 100vw;         
     }
+     
     #ib-text{
         font-size: 3rem;
         text-align: center;
@@ -134,7 +122,8 @@ body{
         grid-area: 1/2/2/3;
         text-align: center;
         position: relative;
-        top: 75px;    
+        top: 75px;
+        width: 100vw;    
               
     }
 
@@ -148,31 +137,35 @@ body{
     padding-bottom: 50px;
     overflow: hidden;
     
+    
      
 }
     .flex-container-row {
         display: flex;
-        justify-content: center;
+        flex-direction: row;
+        justify-content: space-evenly;
         
     }
-    .category {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-        
-        
+
+    .category {  
+    max-width: 300px;
     }
-   
+     
     .experience-section .polozka {
         font-size: 3rem;
         font-family: "Oswald";
+        text-align: left;
+     
+        
     }
     .experience-section .polozka ul {
         
         list-style-type: none;
         font-size: 2rem;
-        padding-left: 15px;
+        padding-left: 30px;
+        text-align: left;
     }
+   
 
 .footer-class{
     background-color: rgb(119, 14, 14);
@@ -180,6 +173,86 @@ body{
     text-align: center;
     color: rgb(119, 119, 119);
 }
+
+/*ANIMATIONS*/
+.hero-section{
+       /* Set an initial background so you can see the gradient before the animation starts */
+    background: linear-gradient(45deg, black, black, #ee1a1a, #ee1a1a);
+    background-size: 200% 200%;
+    animation: gradientChange 8s linear infinite;
+    }
+
+    #nadpis{
+        
+         opacity: 0;
+         transform: translateX(-150px);
+         animation: fadeInUp 2s forwards;
+         animation-play-state: paused;      
+    }
+   
+    #portrait-div{
+         opacity: 0;
+         transform: translateX(150px);
+         animation: fadeInUp 2s forwards;
+         animation-play-state: paused;  
+    }
+
+    
+      #ib, #ib-text, #button {
+         opacity: 0;
+         transform: translateY(150px);
+         animation: fadeInUp 2s forwards;
+         animation-play-state: paused;          
+    }
+
+    #experience-header, .category2>.polozka{
+        opacity: 0;
+        transform: translateY(150px);
+        animation: fadeInUp 2s forwards;
+        animation-play-state: paused;  
+    }
+
+    .category1>.polozka{
+        opacity: 0;
+        transform: translateY(150px) translateX(-100px);
+        animation: fadeInUp 2s forwards;
+        animation-play-state: paused;  
+    }
+    .category3>.polozka{
+        opacity: 0;
+        transform: translateY(150px) translateX(100px);
+        animation: fadeInUp 2s forwards;
+        animation-play-state: paused;  
+    }
+
+
+    #nadpis.loaded, #portrait-div.loaded, #ib.loaded, #ib-text.loaded, #button.loaded, #experience-header.loaded, .category1>.polozka.loaded, .category2>.polozka.loaded, .category3>.polozka.loaded {
+        animation-play-state: running;
+    }
+    
+/*ANIMATIONS KEYFRAMES*/
+
+@keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+@keyframes gradientChange {
+    0%, 100% {
+        background: linear-gradient(45deg, black, black, #ee1a1a, #ee1a1a);
+        background-size: 200% 200%;
+        background-position: 0% 100%;
+    }
+    50% {
+        background: linear-gradient(45deg, black, black, #ee1a1a, #ee1a1a);
+        background-size: 200% 200%;
+        background-position: 10% 60%;
+    }
+}
+
+/*MEDIA QUERIES*/
    
        @media (max-width: 750px) {
         
@@ -215,5 +288,5 @@ body{
 
       }
 
-     
+      
     
