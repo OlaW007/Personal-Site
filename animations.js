@@ -1,6 +1,7 @@
 // Define an array of selectors
 const selectors = [
-  '#button',
+  '#box',
+  'button',
   '#portrait-div',
   '#nadpis',
   '#ib',
