@@ -11,6 +11,10 @@ body{
     background-color: white;
 }
 
+body, html {
+    overflow-x: hidden;
+  }
+
 .hero-section{
     display: flex;
     flex-direction: row;
