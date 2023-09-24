@@ -180,15 +180,20 @@ body, html {
          opacity: 0;
          transform: translateX(150px);
          animation: fadeInUp 2s forwards;
-         animation-play-state: paused;  
+         animation-play-state: paused;
+         animation-delay: 0.5s;   
     }
 
     
-      #ib, #ib-text, #box {
+    #ib, #ib-text, #box {
          opacity: 0;
          transform: translateY(150px);
          animation: fadeInUp 2s forwards;
-         animation-play-state: paused;          
+         animation-play-state: paused;               
+    }
+
+    #ib{
+        animation-delay: 1s; 
     }
 
     .category2>.polozka{
