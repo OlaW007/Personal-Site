@@ -366,6 +366,21 @@ body, html {
 
       }
 
+  @media (max-width: 400px) {
+        .hero-section{
+            height: 550px;
+        }
+
+        .experience-section .polozka {
+            font-size: 1.5rem;   
+         }
+
+         .experience-section .polozka ul {
+        
+            font-size: 1.2rem;
+        }
+      }
+
       
     
   
